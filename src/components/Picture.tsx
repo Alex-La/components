@@ -6,12 +6,12 @@ interface Props {
   title?: string;
   subTitle?: string;
   aspectRatio?: "16by9" | "21by9" | "4by3" | "1by1" | undefined;
-  videoURL: string;
+  pictureURL: string;
 }
 
 interface State {}
 
-class Video extends Component<Props, State> {
+class Picture extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
   }
@@ -22,16 +22,15 @@ class Video extends Component<Props, State> {
         <h4>{this.props.title && this.props.title}</h4>
         <p>{this.props.subTitle && this.props.subTitle}</p>
         <ResponsiveEmbed aspectRatio={this.props.aspectRatio}>
-          <iframe
+          <embed
             title={this.props.title}
             className="embed-responsive-item"
-            src={this.props.videoURL}
-            allowFullScreen
-          ></iframe>
+            src={this.props.pictureURL}
+          ></embed>
         </ResponsiveEmbed>
       </Container>
     );
   }
 }
 
-export default Video;
+export default Picture;

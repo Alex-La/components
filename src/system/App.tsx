@@ -1,15 +1,15 @@
 import React from "react";
 import "../styles/App.css";
 
-import Video from "../components/Video";
+import Picture from "../components/Picture";
 
 function App() {
   return (
     <div className="App">
-      <Video
+      <Picture
         title="heelo"
         subTitle="gerhe"
-        videoURL="https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
+        pictureURL="https://www.frogx3.com/wp-content/uploads/2017/12/Undraw-ilustraciones-1.png"
         aspectRatio="16by9"
       />
     </div>
