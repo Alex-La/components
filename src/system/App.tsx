@@ -1,16 +1,16 @@
 import React from "react";
 import "../styles/App.css";
 
-import FAQ from "../components/FAQ";
+import Video from "../components/Video";
 
 function App() {
   return (
     <div className="App">
-      <FAQ
-        questions={[
-          { id: "143", question: "Why?", answer: "Because" },
-          { id: "144", question: "Why?", answer: "Because" },
-        ]}
+      <Video
+        title="heelo"
+        subTitle="gerhe"
+        videoURL="https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
+        aspectRatio="16by9"
       />
     </div>
   );
