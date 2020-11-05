@@ -1,8 +1,9 @@
 import React, { Component } from "react";
-import { Container, CardColumns, Card } from "react-bootstrap";
+import { Container, Card } from "react-bootstrap";
 import FeaturedMessage from "../classes/FeaturedMessage";
 
 interface Props {
+  marginBottom?: string;
   width?: string;
   text?: "dark" | "white";
   bg?:
@@ -40,7 +41,7 @@ class News extends Component<Props, State> {
           width: this.props.width ? this.props.width : "18rem",
           cursor: message.link && "pointer",
         }}
-        className="mb-2"
+        className={this.props.marginBottom ? this.props.marginBottom : "mb-2"}
       >
         {message.image && (
           <Card.Img
