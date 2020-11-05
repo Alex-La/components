@@ -2,13 +2,13 @@
 
 ## Блок Headline
 
-backgroundColor?: string; - цвет фона
-textColor?: string; - цвет текста
-firstImage?: ImageObject; - первое изобаражение, может быть единственным
-secondImage?: ImageObject; - второе изображение
-tagline?: string; - слоган
-clarification?: string; - пояснительный текст
-linkBtnText?: string; - текст кнопки переадресации, кнопка отображается, если текст указан
-linkBtnHref?: any; - адрес переадресации кнопки (не обязательно)
-onLinkBtn?: () => void; - callBack функция для кнопки переадресации (не обязательно)
-btnVariant?: string; цвет кнопки стандартных вариантов Bootstrap (primary, т.д.)
+backgroundColor?: string; - цвет фона <br />
+textColor?: string; - цвет текста <br />
+firstImage?: ImageObject; - первое изобаражение, может быть единственным <br />
+secondImage?: ImageObject; - второе изображение <br />
+tagline?: string; - слоган <br />
+clarification?: string; - пояснительный текст <br />
+linkBtnText?: string; - текст кнопки переадресации, кнопка отображается, если текст указан <br />
+linkBtnHref?: any; - адрес переадресации кнопки (не обязательно) <br />
+onLinkBtn?: () => void; - callBack функция для кнопки переадресации (не обязательно) <br />
+btnVariant?: string; цвет кнопки стандартных вариантов Bootstrap (primary, т.д.) <br />
