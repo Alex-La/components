@@ -5,15 +5,22 @@ import ImageObject from "../classes/ImageObject";
 import ArrowRight from "bootstrap-icons/icons/arrow-right.svg";
 
 interface Props {
-  backgroundColor?: string;
-  textColor?: string;
+  text?: "dark" | "white";
+  bg?:
+    | "primary"
+    | "secondary"
+    | "success"
+    | "danger"
+    | "warning"
+    | "info"
+    | "light"
+    | "dark";
   firstImage?: ImageObject;
   secondImage?: ImageObject;
   tagline?: string;
   clarification?: string;
   linkBtnText?: string;
   linkBtnHref?: any;
-  onLinkBtn?: () => void;
   btnVariant?: string;
 }
 
@@ -26,16 +33,14 @@ class Headline extends Component<Props, State> {
   }
 
   linkBtnHandler() {
-    if (this.props.onLinkBtn) this.props.onLinkBtn();
+    console.log(this.props.linkBtnHref);
     if (this.props.linkBtnHref) window.location = this.props.linkBtnHref;
   }
 
   render() {
     return (
       <Container className="block-cont">
-        <Card
-          className={`${this.props.backgroundColor} ${this.props.textColor}`}
-        >
+        <Card bg={this.props.bg} text={this.props.text}>
           <Row>
             {this.props.firstImage && (
               <Col>

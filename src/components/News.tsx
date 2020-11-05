@@ -1,20 +1,8 @@
 import React, { Component } from "react";
-import { Container, Card } from "react-bootstrap";
+import { Container, Card, Row, Col } from "react-bootstrap";
 import FeaturedMessage from "../classes/FeaturedMessage";
 
 interface Props {
-  marginBottom?: string;
-  width?: string;
-  text?: "dark" | "white";
-  bg?:
-    | "primary"
-    | "secondary"
-    | "success"
-    | "danger"
-    | "warning"
-    | "info"
-    | "light"
-    | "dark";
   messages: FeaturedMessage[];
 }
 
@@ -32,42 +20,39 @@ class News extends Component<Props, State> {
 
   messageCard(message: FeaturedMessage) {
     return (
-      <Card
-        onClick={() => this.handleClick(message.link)}
-        bg={this.props.bg}
+      <Col
         key={message.id}
-        text={this.props.text}
-        style={{
-          width: this.props.width ? this.props.width : "18rem",
-          cursor: message.link && "pointer",
-        }}
-        className={this.props.marginBottom ? this.props.marginBottom : "mb-2"}
+        xs={12}
+        md={6}
+        lg={4}
+        xl={3}
+        className="d-flex justify-content-center"
       >
-        {message.image && (
+        <Card
+          className="mb-5 shadow bg-white rounded"
+          style={{ width: message.image?.width }}
+        >
+          <Card.Body>
+            <Card.Title>{message.title}</Card.Title>
+            <Card.Text>{message.message}</Card.Text>
+          </Card.Body>
           <Card.Img
             variant="top"
-            width={message.image.width}
-            height={message.image.height}
-            src={message.image.data}
+            src={message.image?.data}
+            width={message.image?.width}
+            height={message.image?.height}
           />
-        )}
-        <Card.Body>
-          <Card.Title>{message.title}</Card.Title>
-          <Card.Text>{message.message}</Card.Text>
-        </Card.Body>
-        <Card.Footer>
-          <small className="text-muted">
-            {new Date(message.date).toLocaleString()}
-          </small>
-        </Card.Footer>
-      </Card>
+        </Card>
+      </Col>
     );
   }
 
   render() {
     return (
       <Container className="block-cont">
-        {this.props.messages.map((message) => this.messageCard(message))}
+        <Row className="d-flex justify-content-center">
+          {this.props.messages.map((message) => this.messageCard(message))}
+        </Row>
       </Container>
     );
   }

@@ -1,30 +1,51 @@
 import React from "react";
 import "../styles/App.css";
 
-import Reviews from "../components/Reviews";
+import News from "../components/News";
+
+const newsExample = [
+  {
+    id: "325",
+    title: "Lorem title",
+    message: "Lorem message about new day",
+    date: 23352005,
+    image: {
+      id: "24",
+      data: "https://picsum.photos/300/100",
+      width: 300,
+      height: 100,
+    },
+  },
+  {
+    id: "325",
+    title: "Lorem title",
+    message: "Lorem message about new day",
+    date: 23352005,
+    image: {
+      id: "24",
+      data: "https://picsum.photos/300/100",
+      width: 300,
+      height: 100,
+    },
+  },
+  {
+    id: "325",
+    title: "Lorem title",
+    message: "Lorem message about new day",
+    date: 23352005,
+    image: {
+      id: "24",
+      data: "https://picsum.photos/300/100",
+      width: 300,
+      height: 100,
+    },
+  },
+];
 
 function App() {
   return (
     <div className="App">
-      <Reviews
-        imageShape="rounded-circle"
-        reviews={[
-          {
-            id: "135",
-            rating: 5,
-            title: "Hello",
-            message: "Wordl",
-            author: "Don Jones",
-            date: 3237345,
-            photo: {
-              data: "https://randomuser.me/api/portraits/thumb/men/75.jpg",
-              id: "326",
-              width: 75,
-              height: 75,
-            },
-          },
-        ]}
-      />
+      <News messages={newsExample} />
     </div>
   );
 }
