@@ -19,6 +19,7 @@ interface Props {
 interface State {}
 
 class CarouselComponent extends Component<Props, State> {
+  // eslint-disable-next-line @typescript-eslint/no-useless-constructor
   constructor(props: Props) {
     super(props);
   }

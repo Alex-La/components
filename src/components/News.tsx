@@ -3,12 +3,24 @@ import { Container, CardColumns, Card } from "react-bootstrap";
 import FeaturedMessage from "../classes/FeaturedMessage";
 
 interface Props {
+  width?: string;
+  text?: "dark" | "white";
+  bg?:
+    | "primary"
+    | "secondary"
+    | "success"
+    | "danger"
+    | "warning"
+    | "info"
+    | "light"
+    | "dark";
   messages: FeaturedMessage[];
 }
 
 interface State {}
 
 class News extends Component<Props, State> {
+  // eslint-disable-next-line @typescript-eslint/no-useless-constructor
   constructor(props: Props) {
     super(props);
   }
@@ -20,9 +32,15 @@ class News extends Component<Props, State> {
   messageCard(message: FeaturedMessage) {
     return (
       <Card
-        key={message.id}
-        style={{ cursor: message.link && "pointer" }}
         onClick={() => this.handleClick(message.link)}
+        bg={this.props.bg}
+        key={message.id}
+        text={this.props.text}
+        style={{
+          width: this.props.width ? this.props.width : "18rem",
+          cursor: message.link && "pointer",
+        }}
+        className="mb-2"
       >
         {message.image && (
           <Card.Img
@@ -48,9 +66,7 @@ class News extends Component<Props, State> {
   render() {
     return (
       <Container className="block-cont">
-        <CardColumns>
-          {this.props.messages.map((message) => this.messageCard(message))}
-        </CardColumns>
+        {this.props.messages.map((message) => this.messageCard(message))}
       </Container>
     );
   }

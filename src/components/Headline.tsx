@@ -20,6 +20,7 @@ interface Props {
 interface State {}
 
 class Headline extends Component<Props, State> {
+  // eslint-disable-next-line @typescript-eslint/no-useless-constructor
   constructor(props: Props) {
     super(props);
   }
@@ -70,7 +71,11 @@ class Headline extends Component<Props, State> {
                 variant={this.props.btnVariant}
               >
                 {this.props.linkBtnText}
-                <img src={ArrowRight} className="hl-btn-icon" />
+                <img
+                  src={ArrowRight}
+                  alt={ArrowRight}
+                  className="hl-btn-icon"
+                />
               </Button>
             )}
           </Card.ImgOverlay>
