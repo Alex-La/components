@@ -1,38 +1,26 @@
 import React from "react";
 import "../styles/App.css";
 
-import News from "../components/News";
+import Reviews from "../components/Reviews";
 
 function App() {
   return (
     <div className="App">
-      <News
-        width="300px"
-        messages={[
+      <Reviews
+        imageShape="rounded-circle"
+        reviews={[
           {
-            id: "12",
-            title: "hello",
-            message: "world",
-            date: 12403523,
-            link: "/",
-            image: {
-              id: "235",
-              data: "https://picsum.photos/200/300",
-              width: 200,
-              height: 300,
-            },
-          },
-          {
-            id: "12",
-            title: "hello",
-            message: "world",
-            date: 12403523,
-            link: "/",
-            image: {
-              id: "235",
-              data: "https://picsum.photos/200/300",
-              width: 200,
-              height: 300,
+            id: "135",
+            rating: 5,
+            title: "Hello",
+            message: "Wordl",
+            author: "Don Jones",
+            date: 3237345,
+            photo: {
+              data: "https://randomuser.me/api/portraits/thumb/men/75.jpg",
+              id: "326",
+              width: 75,
+              height: 75,
             },
           },
         ]}
