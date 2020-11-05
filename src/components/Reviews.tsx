@@ -4,6 +4,16 @@ import { Container, Card, Row, Col } from "react-bootstrap";
 import "../styles/Reviews.css";
 
 interface Props {
+  bg?:
+    | "primary"
+    | "secondary"
+    | "success"
+    | "danger"
+    | "warning"
+    | "info"
+    | "light"
+    | "dark";
+  text?: "white" | "dark";
   imageShape?: "rounded-circle" | "rounded";
   reviews: Review[];
 }
@@ -28,7 +38,7 @@ class Reviews extends Component<Props, State> {
                 id={`star${index}`}
                 name="rating"
                 value={index}
-                checked={index == 5 - rating}
+                checked={index === 5 - rating}
                 disabled
               />
               <label htmlFor={`star${index}`} title={`${index} star`}></label>
@@ -40,7 +50,7 @@ class Reviews extends Component<Props, State> {
 
   reviewCard(review: Review) {
     return (
-      <Card bg="white">
+      <Card bg={this.props.bg} text={this.props.text}>
         <Card.Header>
           <Row>
             {review.photo && (
