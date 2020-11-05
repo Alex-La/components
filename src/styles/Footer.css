@@ -1,0 +1,23 @@
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css";
+
+/* Style all font awesome icons */
+.fa {
+  background-color: silver;
+  margin: 10px;
+  padding: 10px;
+  font-size: 20px;
+  text-decoration: none;
+  color: black;
+}
+
+.row-margin {
+  margin-top: 20px;
+}
+
+.ul-pd {
+  padding: 0px;
+}
+.li-st {
+  list-style-type: none;
+  margin-bottom: 10px;
+}

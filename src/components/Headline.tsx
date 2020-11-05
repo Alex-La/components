@@ -1,27 +1,12 @@
 import React, { Component } from "react";
 import "../styles/Headline.css";
-import { Container, Card, Row, Col, Button } from "react-bootstrap";
+import { Container, Card, Button } from "react-bootstrap";
 import ImageObject from "../classes/ImageObject";
-import ArrowRight from "bootstrap-icons/icons/arrow-right.svg";
 
 interface Props {
-  text?: "dark" | "white";
-  bg?:
-    | "primary"
-    | "secondary"
-    | "success"
-    | "danger"
-    | "warning"
-    | "info"
-    | "light"
-    | "dark";
-  firstImage?: ImageObject;
-  secondImage?: ImageObject;
-  tagline?: string;
-  clarification?: string;
-  linkBtnText?: string;
-  linkBtnHref?: any;
-  btnVariant?: string;
+  image: ImageObject;
+  heading: string;
+  buttonText: string;
 }
 
 interface State {}
@@ -32,57 +17,22 @@ class Headline extends Component<Props, State> {
     super(props);
   }
 
-  linkBtnHandler() {
-    console.log(this.props.linkBtnHref);
-    if (this.props.linkBtnHref) window.location = this.props.linkBtnHref;
-  }
-
   render() {
     return (
       <Container className="block-cont">
-        <Card bg={this.props.bg} text={this.props.text}>
-          <Row>
-            {this.props.firstImage && (
-              <Col>
-                <Card.Img
-                  width={this.props.firstImage.width}
-                  height={this.props.firstImage.height}
-                  src={this.props.firstImage.data}
-                  alt={this.props.firstImage.data}
-                  className="hl-img"
-                />
-              </Col>
-            )}
-
-            {this.props.secondImage && (
-              <Col>
-                <Card.Img
-                  width={this.props.secondImage.width}
-                  height={this.props.secondImage.height}
-                  src={this.props.secondImage.data}
-                  alt={this.props.secondImage.data}
-                  className="hl-img"
-                />
-              </Col>
-            )}
-          </Row>
-          <Card.ImgOverlay>
-            <Card.Title>{this.props.tagline}</Card.Title>
-            <Card.Text>{this.props.clarification}</Card.Text>
-            {this.props.linkBtnText && (
-              <Button
-                onClick={this.linkBtnHandler}
-                size="sm"
-                variant={this.props.btnVariant}
-              >
-                {this.props.linkBtnText}
-                <img
-                  src={ArrowRight}
-                  alt={ArrowRight}
-                  className="hl-btn-icon"
-                />
+        <Card className="bg-dark text-white">
+          <Card.Img
+            src={this.props.image.data}
+            width={this.props.image.width}
+            height={this.props.image.height}
+          />
+          <Card.ImgOverlay className="d-flex align-items-center justify-content-center">
+            <Card.Text className="overlay-margin">
+              <p className="h-props p-size">{this.props.heading}</p>
+              <Button variant="success" className="btn-size">
+                {this.props.buttonText}
               </Button>
-            )}
+            </Card.Text>
           </Card.ImgOverlay>
         </Card>
       </Container>
