@@ -53,7 +53,13 @@ videoURL: string; - ссылка на видео <br />
 
 ## Компонент Picture
 
-title?: string; - заголовок
-subTitle?: string; - подзаголовок
-aspectRatio?: "16by9" | "21by9" | "4by3" | "1by1" | undefined; - соотношение сторон изображения
-pictureURL: string; - ссылка на изображение
+title?: string; - заголовок <br />
+subTitle?: string; - подзаголовок <br />
+aspectRatio?: "16by9" | "21by9" | "4by3" | "1by1" | undefined; - соотношение сторон изображения <br />
+pictureURL: string; - ссылка на изображение <br />
+
+## Компонент FAQ
+
+bg?: "primary" | "secondary" | "success" | "danger" | "warning" | "info" | "light" | "dark"; - цвет фона <br />
+text?: "white" | "dark"; - цвет текста <br />
+questions: QA[]; - массив вопросов <br />
