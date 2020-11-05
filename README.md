@@ -1,6 +1,6 @@
 # Документация компонентов
 
-## Блок Headline
+## Компонент Headline
 
 backgroundColor?: string; - цвет фона <br />
 textColor?: string; - цвет текста <br />
@@ -13,26 +13,47 @@ linkBtnHref?: any; - адрес переадресации кнопки (не о
 onLinkBtn?: () => void; - callBack функция для кнопки переадресации (не обязательно) <br />
 btnVariant?: string; - цвет кнопки стандартных вариантов Bootstrap (primary, т.д.) <br />
 
-## Блок Карусель
+## Компонент Carousel
 
 Стандартные свойства Bootsrap Carousel
 
-controls?: boolean;
-fade?: boolean;
-indicators?: boolean;
-interval?: number;
-onSelect?: (eventKey: number, event: Object | null) => void;
-onSlid?: (eventKey: number, direction: "left" | "right") => void;
-onSlide?: (eventKey: number, direction: "left" | "right") => void;
-pause?: "hover" | false;
-slide?: boolean;
-touch?: boolean;
-wrap?: boolean;
+controls?: boolean; <br />
+fade?: boolean; <br />
+indicators?: boolean; <br />
+interval?: number; <br />
+onSelect?: (eventKey: number, event: Object | null) => void; <br />
+onSlid?: (eventKey: number, direction: "left" | "right") => void; <br />
+onSlide?: (eventKey: number, direction: "left" | "right") => void; <br />
+pause?: "hover" | false; <br />
+slide?: boolean; <br />
+touch?: boolean; <br />
+wrap?: boolean; <br />
 
-## Блок Новости
+## Компонент News
 
-marginBottom?: string; - отступ между карточками новостей
-width?: string; - ширина карточки
-text?: "dark" | "white"; - цвет текста
-bg?: "primary" | "secondary" | "success" | "danger" | "warning" | "info" | "light" | "dark"; - цвет фона
-messages: FeaturedMessage[]; - массив новостей
+marginBottom?: string; - отступ между карточками новостей <br />
+width?: string; - ширина карточки <br />
+text?: "dark" | "white"; - цвет текста <br />
+bg?: "primary" | "secondary" | "success" | "danger" | "warning" | "info" | "light" | "dark"; - цвет фона <br />
+messages: FeaturedMessage[]; - массив новостей <br />
+
+## Компонент Reviews
+
+bg?: "primary" | "secondary" | "success" | "danger" | "warning" | "info" | "light" | "dark"; - цвет фона <br />
+text?: "white" | "dark"; - цвет текста <br />
+imageShape?: "rounded-circle" | "rounded"; - форма аватара <br />
+reviews: Review[]; - массив отзывов <br />
+
+## Компонент Video
+
+title?: string; - заголовок <br />
+subTitle?: string; - подзаголовок <br />
+aspectRatio?: "16by9" | "21by9" | "4by3" | "1by1" | undefined; - соотношение сторон видео <br />
+videoURL: string; - ссылка на видео <br />
+
+## Компонент Picture
+
+title?: string; - заголовок
+subTitle?: string; - подзаголовок
+aspectRatio?: "16by9" | "21by9" | "4by3" | "1by1" | undefined; - соотношение сторон изображения
+pictureURL: string; - ссылка на изображение
