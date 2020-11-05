@@ -7,6 +7,16 @@ import caretDown from "bootstrap-icons/icons/caret-down.svg";
 import caretUp from "bootstrap-icons/icons/caret-up.svg";
 
 interface Props {
+  bg?:
+    | "primary"
+    | "secondary"
+    | "success"
+    | "danger"
+    | "warning"
+    | "info"
+    | "light"
+    | "dark";
+  text?: "white" | "dark";
   questions: QA[];
 }
 
@@ -43,7 +53,7 @@ class FAQ extends Component<Props, State> {
   // One question block
   accordionItem(question: QA, index: number) {
     return (
-      <Card key={question.id}>
+      <Card bg={this.props.bg} text={this.props.text} key={question.id}>
         <Accordion.Toggle
           className="faq-card"
           as={Card.Header}
