@@ -12,6 +12,8 @@ interface Props {
   tagline?: string;
   clarification?: string;
   linkBtnText?: string;
+  linkBtnHref?: any;
+  onLinkBtn?: () => void;
   btnVariant?: string;
 }
 
@@ -20,6 +22,11 @@ interface State {}
 class Headline extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
+  }
+
+  linkBtnHandler() {
+    if (this.props.onLinkBtn) this.props.onLinkBtn();
+    if (this.props.linkBtnHref) window.location = this.props.linkBtnHref;
   }
 
   render() {
@@ -57,7 +64,11 @@ class Headline extends Component<Props, State> {
             <Card.Title>{this.props.tagline}</Card.Title>
             <Card.Text>{this.props.clarification}</Card.Text>
             {this.props.linkBtnText && (
-              <Button size="sm" variant={this.props.btnVariant}>
+              <Button
+                onClick={this.linkBtnHandler}
+                size="sm"
+                variant={this.props.btnVariant}
+              >
                 {this.props.linkBtnText}
                 <img src={ArrowRight} className="hl-btn-icon" />
               </Button>
