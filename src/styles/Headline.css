@@ -33,6 +33,6 @@
   }
 }
 
-.img-head {
-  background-size: cover;
+.img-card {
+  min-width: 100px;
 }

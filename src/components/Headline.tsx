@@ -23,7 +23,7 @@ class Headline extends Component<Props, State> {
       <Container fluid className="block-cont" style={{ padding: 0 }}>
         <Card className="text-white">
           <Card.Img
-            className="img-fluid"
+            className="img-fluid img-card"
             src={this.props.image.data}
             alt={this.props.image.data}
           />

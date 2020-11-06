@@ -1,62 +1,67 @@
 import React from "react";
 import "../styles/App.css";
 
-import News from "../components/News";
+import SubscriptionPlan from "../components/SubscriptionPlan";
 import Headline from "../components/Headline";
-import Footer from "../components/Footer";
-
-const newsExample = [
-  {
-    id: "325",
-    title: "Lorem title",
-    message: "Lorem message about new day",
-    date: 23352005,
-    image: {
-      id: "24",
-      data: "https://picsum.photos/300/100",
-      width: 300,
-      height: 100,
-    },
-  },
-  {
-    id: "325",
-    title: "Lorem title",
-    message: "Lorem message about new day",
-    date: 23352005,
-    image: {
-      id: "24",
-      data: "https://picsum.photos/300/100",
-      width: 300,
-      height: 100,
-    },
-  },
-  {
-    id: "325",
-    title: "Lorem title",
-    message: "Lorem message about new day",
-    date: 23352005,
-    image: {
-      id: "24",
-      data: "https://picsum.photos/300/100",
-      width: 300,
-      height: 100,
-    },
-  },
-];
 
 function App() {
   return (
     <div className="App">
-      <Headline
-        buttonLink="/"
-        heading="Bring Digital Twins to Life with AI that Respond to Real Events"
-        buttonText="MAKE BETTER DECISIONS WITH AI"
-        image={{
-          id: "1124",
-          data: "https://picsum.photos/1200/400",
-          width: 800,
-          height: 400,
-        }}
+      <br />
+      <SubscriptionPlan
+        features={[
+          {
+            id: "1",
+            name: "Льготный период",
+          },
+          {
+            id: "2",
+            name: "Ставка",
+          },
+          {
+            id: "3",
+            name: "Снятие",
+          },
+          {
+            id: "4",
+            name: "Пополнение",
+          },
+        ]}
+        plans={[
+          {
+            id: "5",
+            name: "Universal Bank",
+            values: [
+              "До 62 дней",
+              "3,1%",
+              "0,5% - собственные средства 4% - кредитные средства",
+              "Бесплатно",
+            ],
+            signupLabel: "More",
+          },
+          {
+            id: "6",
+            name: "Приват Банк",
+            values: [
+              "До 62 дней 2",
+              "3,1% 2",
+              "0,5% - собственные средства 4%",
+              "Бесплатно 2",
+            ],
+            signupLabel: "More",
+          },
+          {
+            id: "7",
+            name: "Universal Bank 3",
+            values: [
+              "До 62 дней 3",
+              "3,1% 3",
+              "0,5% - собственные средства 4% - кредитные средства 3",
+              "Бесплатно 3",
+            ],
+            signupLabel: "More",
+          },
+        ]}
       />
     </div>
   );

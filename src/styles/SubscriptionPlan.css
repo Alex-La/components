@@ -1,0 +1,43 @@
+.divider {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid lightgray;
+}
+
+.card-body {
+  text-align: center;
+  padding: 0 !important;
+  padding-top: 15px !important;
+  padding-bottom: 15px !important;
+}
+
+.sp-card {
+  border: none !important;
+  background-color: transparent !important;
+}
+
+.sp-card-d {
+  border-left: 1px solid lightgray !important;
+}
+
+.sp-card-focus {
+  border-radius: 20px !important;
+  border: none !important;
+  background-color: #e85e5b !important;
+}
+
+.t-color {
+  color: gray;
+}
+
+.scrolling-wrapper {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  overflow-x: auto !important;
+}
+
+.scrolling-item {
+  width: 200px;
+  flex: 0 0 auto;
+}
