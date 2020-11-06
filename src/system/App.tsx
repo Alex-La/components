@@ -5,6 +5,10 @@ import SubscriptionPlan from "../components/SubscriptionPlan";
 import Headline from "../components/Headline";
 
 function App() {
+  const hello = () => {
+    console.log("hello");
+  };
+
   return (
     <div className="App">
       <br />
