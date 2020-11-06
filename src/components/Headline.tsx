@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 import "../styles/Headline.css";
-import { Container, Card, Button } from "react-bootstrap";
+import { Container, Card } from "react-bootstrap";
 import ImageObject from "../classes/ImageObject";
 
 interface Props {
   image: ImageObject;
   heading: string;
   buttonText: string;
+  buttonLink: string;
 }
 
 interface State {}
@@ -19,19 +20,24 @@ class Headline extends Component<Props, State> {
 
   render() {
     return (
-      <Container className="block-cont">
-        <Card className="bg-dark text-white">
+      <Container fluid className="block-cont" style={{ padding: 0 }}>
+        <Card className="text-white" bg="">
           <Card.Img
             src={this.props.image.data}
+            alt={this.props.image.data}
             width={this.props.image.width}
             height={this.props.image.height}
           />
           <Card.ImgOverlay className="d-flex align-items-center justify-content-center">
-            <Card.Text className="overlay-margin">
-              <p className="h-props p-size">{this.props.heading}</p>
-              <Button variant="success" className="btn-size">
+            <Card.Text className="overlay-margin h-props p-size">
+              {this.props.heading}
+              <br />
+              <a
+                href={this.props.buttonLink}
+                className="btn btn-success btn-size"
+              >
                 {this.props.buttonText}
-              </Button>
+              </a>
             </Card.Text>
           </Card.ImgOverlay>
         </Card>

@@ -50,6 +50,7 @@ function App() {
       <News messages={newsExample} />
 
       <Headline
+        buttonLink="/"
         heading="Bring Digital Twins to Life with AI that Respond to Real Events"
         buttonText="MAKE BETTER DECISIONS WITH AI"
         image={{
