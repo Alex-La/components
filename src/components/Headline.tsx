@@ -21,12 +21,11 @@ class Headline extends Component<Props, State> {
   render() {
     return (
       <Container fluid className="block-cont" style={{ padding: 0 }}>
-        <Card className="text-white" bg="">
+        <Card className="text-white">
           <Card.Img
+            className="img-fluid"
             src={this.props.image.data}
             alt={this.props.image.data}
-            width={this.props.image.width}
-            height={this.props.image.height}
           />
           <Card.ImgOverlay className="d-flex align-items-center justify-content-center">
             <Card.Text className="overlay-margin h-props p-size">

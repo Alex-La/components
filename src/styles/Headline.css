@@ -1,6 +1,6 @@
 .h-props {
   background: rgba(0, 0, 0, 0.5);
-  padding: 25px;
+  padding: 10px;
 }
 
 .overlay-margin {
@@ -9,11 +9,12 @@
 }
 
 .p-size {
-  font-size: 20px;
+  font-size: 10px;
 }
 
 .btn-size {
-  font-size: 10px !important;
+  padding: 4px !important;
+  font-size: 6px !important;
 }
 
 @media (min-width: 426px) {
@@ -30,4 +31,8 @@
     margin-left: 150px;
     margin-right: 150px;
   }
+}
+
+.img-head {
+  background-size: cover;
 }
