@@ -27,7 +27,7 @@ class CarouselComponent extends Component<Props, State> {
   render() {
     const children = this.props.children;
     return (
-      <Container className="block-cont">
+      <Container fluid className="block-cont cont-fluid">
         <Carousel
           controls={this.props.controls}
           fade={this.props.fade}

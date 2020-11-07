@@ -3,12 +3,9 @@ import "../styles/App.css";
 
 import SubscriptionPlan from "../components/SubscriptionPlan";
 import Headline from "../components/Headline";
+import Carousel from "../components/Carousel";
 
 function App() {
-  const hello = () => {
-    console.log("hello");
-  };
-
   return (
     <div className="App">
       <br />
@@ -67,6 +64,31 @@ function App() {
           },
         ]}
       />
+
+      <Carousel indicators={false}>
+        <Headline
+          image={{
+            data: "https://picsum.photos/1200/400",
+            width: 1200,
+            height: 400,
+            id: "12",
+          }}
+          heading="Hello"
+          buttonText="thrb"
+          buttonLink="/"
+        />
+        <Headline
+          image={{
+            data: "https://picsum.photos/1200/400",
+            width: 1200,
+            height: 400,
+            id: "12",
+          }}
+          heading="Hello"
+          buttonText="thrb"
+          buttonLink="/"
+        />
+      </Carousel>
     </div>
   );
 }
