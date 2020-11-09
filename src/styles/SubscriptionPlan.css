@@ -41,3 +41,7 @@
   width: 200px;
   flex: 0 0 auto;
 }
+
+.mob-cd {
+  padding: 20px;
+}
