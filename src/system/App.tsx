@@ -2,12 +2,50 @@ import React from "react";
 import "../styles/App.css";
 
 import SubscriptionPlan from "../components/SubscriptionPlan";
-import Headline from "../components/Headline";
-import Carousel from "../components/Carousel";
+import UpperMenu from "../components/UpperMenu";
+import HeadlineRed from "../components/Headline/HeadlineRed";
 
 function App() {
   return (
     <div className="App">
+      <UpperMenu
+        elements={[
+          {
+            id: "ge",
+            element: {
+              id: "H",
+              data:
+                "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Windows_Settings_app_icon.png/1024px-Windows_Settings_app_icon.png",
+              width: 30,
+              height: 30,
+            },
+            link: "/",
+          },
+          {
+            id: "ge",
+            element: "hello",
+            link: "/",
+          },
+          {
+            id: "ge",
+            element: "world",
+            link: "/",
+          },
+        ]}
+      />
+      <br />
+      <HeadlineRed
+        image={{
+          data: "https://picsum.photos/1200/600",
+          width: 1200,
+          height: 600,
+          id: "asg",
+        }}
+        title="CLIENT SUCCESS"
+        message="Largest solar farm on the US East Coast will supply electricity to 'Data Center Alley'"
+        linkText="Find out more about the project"
+        linkHref="/"
+      />
       <br />
       <SubscriptionPlan
         features={[
@@ -64,31 +102,6 @@ function App() {
           },
         ]}
       />
-
-      <Carousel indicators={false}>
-        <Headline
-          image={{
-            data: "https://picsum.photos/1200/400",
-            width: 1200,
-            height: 400,
-            id: "12",
-          }}
-          heading="Hello"
-          buttonText="thrb"
-          buttonLink="/"
-        />
-        <Headline
-          image={{
-            data: "https://picsum.photos/1200/400",
-            width: 1200,
-            height: 400,
-            id: "12",
-          }}
-          heading="Hello"
-          buttonText="thrb"
-          buttonLink="/"
-        />
-      </Carousel>
     </div>
   );
 }

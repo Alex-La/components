@@ -2,7 +2,7 @@ import React from "react";
 
 import { render, screen } from "@testing-library/react";
 import Carousel from "../components/Carousel";
-import Headline from "../components/Headline";
+import Headline from "../components/Headline/Headline";
 
 test("Carousel.Test_properties_1", () => {
   render(

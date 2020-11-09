@@ -1,0 +1,36 @@
+.bg-cont {
+  padding: 0 !important;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.cd {
+  border: none !important;
+}
+
+.cd-img {
+  padding-right: 200px;
+}
+
+.cd-link {
+  text-decoration: underline;
+  color: white;
+}
+
+.cd-txt {
+  background-color: #e9041e !important;
+  color: white !important;
+  padding: 25px !important;
+  width: 300px !important;
+  margin-right: 0px !important;
+}
+
+@media (min-width: 1440px) {
+  .cd-img {
+    padding-right: 500px;
+  }
+  .cd-txt {
+    margin-right: 200px !important;
+    width: 500px !important;
+  }
+}

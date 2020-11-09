@@ -1,17 +1,8 @@
 import React, { Component } from "react";
 import "../styles/UpperMenu.css";
 import MenuElement from "../classes/MenuElement";
-
-import {
-  Container,
-  Navbar,
-  Nav,
-  NavDropdown,
-  Form,
-  FormControl,
-  Button,
-} from "react-bootstrap";
 import ImageObject from "../classes/ImageObject";
+import { Container, Navbar, Nav } from "react-bootstrap";
 
 interface Props {
   elements: MenuElement[];
@@ -30,14 +21,21 @@ class UpperMenu extends Component<Props, State> {
       <Container className="block-cont">
         <Navbar expand="lg">
           <Navbar.Brand href="#home">
-            <img width="30" height="30" />
+            <img
+              src={(this.props.elements[0].element as ImageObject).data}
+              width={(this.props.elements[0].element as ImageObject).width}
+              height={(this.props.elements[0].element as ImageObject).height}
+            />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <div className="mr-auto" />
             <Nav>
-              <Nav.Link href="#deets">More deets</Nav.Link>
-              <Nav.Link href="#memes">Dank memes</Nav.Link>
+              {this.props.elements.slice(1).map((el, i) => (
+                <Nav.Link key={i} href={el.link}>
+                  {el.element}
+                </Nav.Link>
+              ))}
             </Nav>
           </Navbar.Collapse>
         </Navbar>

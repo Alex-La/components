@@ -2,7 +2,7 @@ import React from "react";
 
 import { render, screen } from "@testing-library/react";
 
-import Headline from "../components/Headline";
+import Headline from "../components/Headline/Headline";
 
 test("Headline.Test_properties_1", () => {
   render(

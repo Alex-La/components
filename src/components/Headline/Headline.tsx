@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import "../styles/Headline.css";
+import "../../styles/Headline.css";
 import { Container, Card } from "react-bootstrap";
-import ImageObject from "../classes/ImageObject";
+import ImageObject from "../../classes/ImageObject";
 
 interface Props {
   image: ImageObject;
