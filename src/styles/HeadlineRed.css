@@ -25,6 +25,24 @@
   margin-right: 0px !important;
 }
 
+.cont-mob {
+  display: inline !important;
+}
+
+.cont-lap {
+  display: none !important;
+}
+
+@media (min-width: 768px) {
+  .cont-mob {
+    display: none !important;
+  }
+
+  .cont-lap {
+    display: inline !important;
+  }
+}
+
 @media (min-width: 1440px) {
   .cd-img {
     padding-right: 500px;

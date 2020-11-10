@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import { Container, Card } from "react-bootstrap";
 import "../../styles/HeadlineRed.css";
 import ImageObject from "../../classes/ImageObject";
@@ -21,7 +21,7 @@ class HeadlineRed extends Component<Props, State> {
 
   mobileVersion() {
     return (
-      <Container fluid className="block-cont bg-cont">
+      <Container fluid className="block-cont bg-cont cont-mob">
         <Card className="cd">
           <Card.Img src={this.props.image.data} alt={this.props.image.data} />
         </Card>
@@ -41,7 +41,7 @@ class HeadlineRed extends Component<Props, State> {
 
   laptopVersion() {
     return (
-      <Container fluid className="block-cont bg-cont">
+      <Container fluid className="block-cont bg-cont cont-lap">
         <Card className="cd">
           <Card.Img
             src={this.props.image.data}
@@ -64,8 +64,12 @@ class HeadlineRed extends Component<Props, State> {
   }
 
   render() {
-    if (window.innerWidth < 768) return this.mobileVersion();
-    else return this.laptopVersion();
+    return (
+      <Fragment>
+        {this.mobileVersion()}
+        {this.laptopVersion()}
+      </Fragment>
+    );
   }
 }
 

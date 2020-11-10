@@ -58,7 +58,7 @@ class SubscriptionPlan extends Component<Props, State> {
   featureColumn() {
     return (
       <Col sm={3}>
-        <Card className="sp-card">
+        <Card className="sp-card cd-vis">
           <Card.Body className="card-body">
             <Card.Title
               style={{ height: this.state.height[0] }}
@@ -93,7 +93,7 @@ class SubscriptionPlan extends Component<Props, State> {
           text={index === 0 ? "white" : undefined}
           className={`${
             index === 0 ? "shadow-sm mb-1 rounded-1 sp-card-focus" : "sp-card"
-          } `}
+          } cd-vis `}
         >
           <Card.Body className="card-body">
             <Card.Title
@@ -136,19 +136,21 @@ class SubscriptionPlan extends Component<Props, State> {
 
   mobileVersion() {
     return (
-      <Card className="mob-cd shadow-sm mb-1 rounded-1">
-        <Card.Body>
-          <Card.Title>{this.props.features[0].name}</Card.Title>
-          <Card.Text>{this.props.plans[0].values[0]}</Card.Text>
-          {this.props.features.slice(1).map((fet, i) => (
-            <Fragment key={i}>
-              <hr className="divider" />
-              <Card.Title>{fet.name}</Card.Title>
-              <Card.Text>{this.props.plans[0]?.values[i + 1]}</Card.Text>
-            </Fragment>
-          ))}
-        </Card.Body>
-      </Card>
+      <Col sm={12}>
+        <Card className="mob-cd shadow-sm mb-1 rounded-1 cd-vis-m">
+          <Card.Body>
+            <Card.Title>{this.props.features[0].name}</Card.Title>
+            <Card.Text>{this.props.plans[0].values[0]}</Card.Text>
+            {this.props.features.slice(1).map((fet, i) => (
+              <Fragment key={i}>
+                <hr className="divider" />
+                <Card.Title>{fet.name}</Card.Title>
+                <Card.Text>{this.props.plans[0]?.values[i + 1]}</Card.Text>
+              </Fragment>
+            ))}
+          </Card.Body>
+        </Card>
+      </Col>
     );
   }
 
@@ -156,10 +158,10 @@ class SubscriptionPlan extends Component<Props, State> {
     return (
       <Container className="block-cont d-flex justify-content-center">
         <Row>
-          {window.innerWidth > 650 && this.featureColumn()}
-          {window.innerWidth > 650 &&
-            this.props.plans.map((plan, index) => this.planColumn(plan, index))}
-          {window.innerWidth <= 650 && this.mobileVersion()}
+          {this.mobileVersion()}
+
+          {this.featureColumn()}
+          {this.props.plans.map((plan, index) => this.planColumn(plan, index))}
         </Row>
       </Container>
     );

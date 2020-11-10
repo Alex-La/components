@@ -45,3 +45,21 @@
 .mob-cd {
   padding: 20px;
 }
+
+.cd-vis {
+  display: none !important;
+}
+
+.cd-vis-m {
+  display: flex !important;
+}
+
+@media (min-width: 768px) {
+  .cd-vis {
+    display: flex !important;
+  }
+
+  .cd-vis-m {
+    display: none !important;
+  }
+}
