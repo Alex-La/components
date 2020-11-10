@@ -85,11 +85,10 @@ class SubscriptionPlan extends Component<Props, State> {
 
   planColumn(plan: Plan, index: number) {
     return (
-      <Col sm={3}>
+      <Col key={plan.id} sm={3}>
         <Card
           style={{ cursor: plan.onSelect && "pointer" }}
           onClick={(e) => plan.onSelect && plan.onSelect(e)}
-          key={plan.id}
           text={index === 0 ? "white" : undefined}
           className={`${
             index === 0 ? "shadow-sm mb-1 rounded-1 sp-card-focus" : "sp-card"

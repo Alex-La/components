@@ -1,0 +1,17 @@
+.cont-flu {
+  padding: 0;
+}
+
+.sticky-nav {
+  background-color: black;
+}
+
+@media (min-width: 992px) {
+  .sticky-nav {
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 1) 100%
+    );
+  }
+}

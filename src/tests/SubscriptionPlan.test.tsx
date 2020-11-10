@@ -2,8 +2,6 @@ import React from "react";
 
 import { render, screen } from "@testing-library/react";
 import SubscriptionPlan from "../components/SubscriptionPlan";
-import Feature from "../classes/Feature";
-import Plan from "../classes/Plan";
 
 test("SubscriptionPlan.Test_properties_1", () => {
   render(

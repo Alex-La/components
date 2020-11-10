@@ -2,10 +2,32 @@ import React from "react";
 import "../styles/App.css";
 
 import NewsRaddison from "../components/News/NewsRaddison";
+import UpperMenuFour from "../components/UpperMenu/UpperMenuFour";
 
 function App() {
   return (
     <div className="App">
+      <UpperMenuFour
+        elements={[
+          {
+            id: "2",
+            element: {
+              id: "3",
+              data:
+                "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/How_to_use_icon.svg/1200px-How_to_use_icon.svg.png",
+              width: 30,
+              height: 30,
+            },
+            link: "/",
+          },
+          {
+            id: "2",
+            element: "Hello",
+            link: "/",
+          },
+        ]}
+      />
+      <div style={{ height: 600 }}></div>
       <NewsRaddison
         messages={[
           {
