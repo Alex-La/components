@@ -1,0 +1,26 @@
+.slick-next:before,
+.slick-prev:before {
+  color: crimson;
+}
+
+.slick-dots button::before {
+  color: crimson !important;
+}
+
+.slk-cont {
+  margin: 0 auto;
+  padding: 0 30px 30px 30px !important;
+}
+
+.cd-slk {
+  text-align: center;
+}
+
+.slick-slide {
+  padding: 10px !important;
+}
+
+.cd-ftr {
+  background-color: transparent !important;
+  border: 0 !important;
+}

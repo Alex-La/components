@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Container, Card, Row, Col } from "react-bootstrap";
-import FeaturedMessage from "../classes/FeaturedMessage";
+import FeaturedMessage from "../../classes/FeaturedMessage";
 
 interface Props {
   messages: FeaturedMessage[];

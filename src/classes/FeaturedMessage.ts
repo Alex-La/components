@@ -7,7 +7,8 @@ class FeaturedMessage {
     public message: string,
     public date: number,
     public image?: ImageObject,
-    public link?: string
+    public linkName?: string,
+    public linkHref?: string
   ) {}
 }
 
