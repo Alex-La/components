@@ -3,6 +3,7 @@ import "../styles/App.css";
 
 import NewsRaddison from "../components/News/NewsRaddison";
 import UpperMenuFour from "../components/UpperMenu/UpperMenuFour";
+import Gallery from "../components/Carousel/Gallery";
 
 function App() {
   return (
@@ -28,6 +29,47 @@ function App() {
         ]}
       />
       <div style={{ height: 600 }}></div>
+      <Gallery
+        messages={[
+          {
+            message: "lorem ipusem",
+            title: "Hello World",
+            id: "Name",
+            date: 11244,
+            image: {
+              id: "24",
+              data: "https://picsum.photos/1200/600",
+              width: 200,
+              height: 200,
+            },
+          },
+          {
+            message: "lorem ipusem",
+            title: "Hello World",
+            id: "Name",
+            date: 11244,
+            image: {
+              id: "24",
+              data: "https://picsum.photos/1200/600",
+              width: 200,
+              height: 200,
+            },
+          },
+          {
+            message: "lorem ipusem",
+            title: "Hello World",
+            id: "Name",
+            date: 11244,
+            image: {
+              id: "24",
+              data: "https://picsum.photos/1200/600",
+              width: 200,
+              height: 200,
+            },
+          },
+        ]}
+      />
+      <br />
       <NewsRaddison
         messages={[
           {

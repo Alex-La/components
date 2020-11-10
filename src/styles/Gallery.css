@@ -1,0 +1,32 @@
+.cnt {
+  padding: 0;
+}
+
+.gal-item {
+  border: 0 !important;
+}
+
+.slick-slide .slide-h3 {
+  opacity: 0.5;
+}
+
+.slick-center .slide-h3 {
+  opacity: 1;
+}
+
+.slick-gal > .slick-prev {
+  top: 0;
+  left: 84%;
+}
+
+.slick-gal > .slick-next {
+  top: 0;
+  right: 1%;
+}
+
+.slick-gal > .slick-next:before,
+.slick-gal > .slick-prev:before {
+  color: black;
+  width: 20px !important;
+  height: 20px !important;
+}

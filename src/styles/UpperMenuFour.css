@@ -2,6 +2,10 @@
   padding: 0;
 }
 
+.sticky-nav-scrolled {
+  background-color: black;
+}
+
 .sticky-nav {
   background-color: black;
 }

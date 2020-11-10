@@ -1,7 +1,7 @@
 import React from "react";
 
 import { render, screen } from "@testing-library/react";
-import Carousel from "../components/Carousel";
+import Carousel from "../components/Carousel/Carousel";
 import Headline from "../components/Headline/Headline";
 
 test("Carousel.Test_properties_1", () => {
