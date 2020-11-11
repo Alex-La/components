@@ -32,37 +32,40 @@ function App() {
       <Gallery
         messages={[
           {
-            message: "lorem ipusem",
-            title: "Hello World",
-            id: "Name",
+            message: "First card",
+            title: "First",
+            id: "Name 1",
             date: 11244,
             image: {
               id: "24",
-              data: "https://picsum.photos/1200/600",
+              data:
+                "https://i.picsum.photos/id/940/1200/600.jpg?hmac=sgnvtZYAbpqGzADzZ66jN4b5PEIRmWfXcgqKixBE_UE",
               width: 200,
               height: 200,
             },
           },
           {
-            message: "lorem ipusem",
-            title: "Hello World",
-            id: "Name",
+            message: "Second card",
+            title: "Second",
+            id: "Name 2",
             date: 11244,
             image: {
               id: "24",
-              data: "https://picsum.photos/1200/600",
+              data:
+                "https://i.picsum.photos/id/1008/1200/600.jpg?hmac=Lu567F1YSRCeQ5vWPI_Pz9q1zPs_okyFu6NjLf7k2E0",
               width: 200,
               height: 200,
             },
           },
           {
-            message: "lorem ipusem",
-            title: "Hello World",
-            id: "Name",
+            message: "Third card",
+            title: "Third",
+            id: "Name 3",
             date: 11244,
             image: {
               id: "24",
-              data: "https://picsum.photos/1200/600",
+              data:
+                "https://i.picsum.photos/id/78/1200/600.jpg?hmac=bD3G2lTF9oxzSVCJXCMyB7YPUR_QyK0ZtLj4wC3Ag2s",
               width: 200,
               height: 200,
             },
