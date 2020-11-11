@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "../styles/UpperMenu.css";
+import "../../styles/UpperMenu.css";
 import MenuElement from "../../classes/MenuElement";
 import ImageObject from "../../classes/ImageObject";
 import { Container, Navbar, Nav } from "react-bootstrap";
