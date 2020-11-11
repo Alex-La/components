@@ -10,12 +10,35 @@ interface Props {
   messages: FeaturedMessage[];
 }
 
-interface State {}
+interface State {
+  width: number;
+}
 
 class Gallery extends Component<Props, State> {
   // eslint-disable-next-line @typescript-eslint/no-useless-constructor
   constructor(props: Props) {
     super(props);
+
+    this.state = {
+      width: 0,
+    };
+
+    this.updateDimensions = this.updateDimensions.bind(this);
+  }
+
+  updateDimensions() {
+    this.setState({ width: window.innerWidth });
+  }
+
+  componentDidMount() {
+    this.setState({
+      width: window.innerWidth,
+    });
+    window.addEventListener("resize", this.updateDimensions);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.updateDimensions);
   }
 
   galleryCard(message: FeaturedMessage) {
@@ -39,7 +62,7 @@ class Gallery extends Component<Props, State> {
     const settings = {
       focusOnSelect: true,
       centerMode: true,
-      centerPadding: "10%",
+      centerPadding: this.state.width >= 1024 ? "20%" : "5%",
       dots: false,
       arrows: false,
       infinite: true,
