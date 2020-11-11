@@ -22,6 +22,7 @@ class Gallery extends Component<Props, State> {
     return (
       <Card key={message.id} className="gal-item slide-h3">
         <Card.Img
+          className="fluid"
           variant="top"
           src={message.image?.data}
           alt={message.image?.data}
@@ -36,10 +37,11 @@ class Gallery extends Component<Props, State> {
 
   render() {
     const settings = {
+      focusOnSelect: true,
       centerMode: true,
-      centerPadding: "20%",
+      centerPadding: "10%",
       dots: false,
-      arrows: true,
+      arrows: false,
       infinite: true,
       speed: 500,
       slidesToShow: 1,
