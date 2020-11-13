@@ -17,6 +17,13 @@
   color: green;
 }
 
+@media (max-width: 425px) {
+  .rev-slider > .slick-next:before,
+  .rev-slider > .slick-prev:before {
+    display: none;
+  }
+}
+
 .rev-slider > .slick-dots button::before {
   color: green !important;
 }
