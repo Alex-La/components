@@ -1,21 +1,22 @@
-@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
-
-.starrating > input {
-  display: none;
-} /* Remove radio buttons */
-
-.starrating > label:before {
-  content: "\f005"; /* Star */
-  margin: 2px;
-  font-size: 1em;
-  font-family: FontAwesome;
-  display: inline-block;
+.read-more-button {
+  color: blue;
+  cursor: pointer;
 }
 
-.starrating > label {
-  color: #222222;
+.read-more-button:hover {
+  text-decoration: underline;
 }
 
-.starrating > input:checked ~ label {
-  color: #ffca08;
+.crd-ftr {
+  border: 0 !important;
+  background-color: transparent !important;
+}
+
+.rev-slider > .slick-next:before,
+.rev-slider > .slick-prev:before {
+  color: green;
+}
+
+.rev-slider > .slick-dots button::before {
+  color: green !important;
 }
