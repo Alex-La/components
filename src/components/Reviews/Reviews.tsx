@@ -55,6 +55,7 @@ class Reviews extends Component<Props, State> {
         <Slider {...settings} className="rev-slider">
           {this.props.reviews.map((review) => this.cardReview(review))}
         </Slider>
+        <i className="fas fa-angle-right"></i>
       </Container>
     );
   }

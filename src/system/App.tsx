@@ -2,11 +2,36 @@ import React from "react";
 import "../styles/App.css";
 
 import Reviews from "../components/Reviews/Reviews";
+import SliderNews from "../components/Carousel/SliderNews";
+import TwoHeadline from "../components/Headline/TwoHeadline";
 
 function App() {
   return (
     <div className="App">
-      <Reviews
+      <TwoHeadline
+        smallTitle="BLACK FRIDAY"
+        title="SAVE ON TECH FOR ALL YOU DO"
+        message="The latest models at sutting price, just for tou."
+        firstButtonText="PC Deals"
+        firstButtonLink="/"
+        secondButtonLink="/"
+        secondButtonText="Elecronics Deals"
+        bgImage={{
+          id: "1",
+          data:
+            "https://i.picsum.photos/id/882/1200/400.jpg?hmac=o2MuWdU6efrRqxc_0PRK9JuzBRAfxHAN0RW85FVCMrU",
+          width: 1200,
+          height: 400,
+        }}
+        image={{
+          id: "2",
+          data:
+            "https://cdn.iconscout.com/icon/free/png-512/overwatch-2-569226.png",
+          width: 300,
+          height: 300,
+        }}
+      />
+      {/* <Reviews
         reviews={[
           {
             id: "20",
@@ -27,7 +52,7 @@ function App() {
             date: 10235923,
           },
         ]}
-      />
+      /> */}
     </div>
   );
 }

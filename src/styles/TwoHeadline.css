@@ -1,0 +1,23 @@
+.th-cont {
+  padding: 0px !important;
+}
+
+.th-card {
+  padding: 10px;
+  background-color: transparent !important;
+  border: none !important;
+}
+
+.sc-btn {
+  margin: 5px;
+}
+
+.cd-img {
+  object-fit: cover;
+}
+
+@media (max-width: 426px) {
+  .th-img {
+    display: none;
+  }
+}
