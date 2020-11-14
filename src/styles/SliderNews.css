@@ -2,11 +2,6 @@
   padding: 0 !important;
 }
 
-.sl-card {
-  width: 18rem;
-  padding: 10px;
-}
-
 .sn-slider > .slick-next:before,
 .sn-slider > .slick-prev:before {
   color: blue;
@@ -45,14 +40,13 @@
   }
 
   .sl-icard {
-    margin-right: 10rem;
+    margin-left: 16rem;
     width: 18rem;
     top: -100px;
   }
 
   .sn-slider > .slick-dots {
-    text-align: start;
-    margin-left: 20%;
+    margin-left: -27%;
   }
 }
 
@@ -62,10 +56,16 @@
   }
 
   .sn-slider > .slick-dots {
-    margin-left: 21%;
+    margin-left: -26%;
   }
 
   .sl-icard {
-    margin-right: 12rem;
+    margin-left: 27rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .sl-icard {
+    margin-left: 38rem;
   }
 }

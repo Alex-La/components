@@ -74,7 +74,7 @@ class SliderNews extends Component<Props, State> {
           ))}
         </Slider>
         <Container>
-          <Card className="float-right sl-icard">
+          <Card className="sl-icard">
             <Card.Body>
               <Card.Title>
                 {this.props.messages[this.state.currentSlide].title}
