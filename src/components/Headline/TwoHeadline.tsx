@@ -31,8 +31,8 @@ class TwoHeadline extends Component<Props, State> {
             className="cd-img"
             src={this.props.bgImage.data}
             alt={this.props.bgImage.data}
-            width={1200}
-            height={400}
+            width={this.props.bgImage.width}
+            height={this.props.bgImage.height}
           />
           <Card.ImgOverlay className="d-flex align-items-center">
             <Container>

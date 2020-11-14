@@ -8,7 +8,56 @@ import TwoHeadline from "../components/Headline/TwoHeadline";
 function App() {
   return (
     <div className="App">
-      <TwoHeadline
+      <SliderNews
+        messages={[
+          {
+            id: "1",
+            title: "Drive success with secure digital workspace technology 1",
+            message: "Drive success with secure digital workspace technology 1",
+            date: 1243253,
+            image: {
+              id: "2",
+              data:
+                "https://i.picsum.photos/id/1053/1200/600.jpg?hmac=yoVgERSv7XimmByFURg3IUAevqgSPAyeimo1-TqJpj0",
+              width: 1200,
+              height: 600,
+            },
+            linkHref: "/",
+            linkName: "Show Blog",
+          },
+          {
+            id: "1",
+            title: "Drive success with secure digital workspace technology 2",
+            message: "Drive success with secure digital workspace technology 2",
+            date: 1243253,
+            image: {
+              id: "2",
+              data:
+                "https://i.picsum.photos/id/834/1200/600.jpg?hmac=AnIkKiZYE17bHrposiF5MuNjohZH4LseNGIEmDbmTso",
+              width: 1200,
+              height: 600,
+            },
+            linkHref: "/",
+            linkName: "Show Blog",
+          },
+          {
+            id: "1",
+            title: "Drive success with secure digital workspace technology 3",
+            message: "Drive success with secure digital workspace technology 3",
+            date: 1243253,
+            image: {
+              id: "2",
+              data:
+                "https://i.picsum.photos/id/923/1200/600.jpg?hmac=RoYdP5uV3QSllLy2cH65cPfNWUXo9brgm1lDY8YdhSA",
+              width: 1200,
+              height: 600,
+            },
+            linkHref: "/",
+            linkName: "Show Blog",
+          },
+        ]}
+      />
+      {/* <TwoHeadline
         smallTitle="BLACK FRIDAY"
         title="SAVE ON TECH FOR ALL YOU DO"
         message="The latest models at sutting price, just for tou."
@@ -30,7 +79,7 @@ function App() {
           width: 300,
           height: 300,
         }}
-      />
+      /> */}
       {/* <Reviews
         reviews={[
           {
