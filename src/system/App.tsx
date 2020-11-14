@@ -31,6 +31,7 @@ function App() {
           height: 300,
         }}
       />
+      <br />
       <SliderNews
         messages={[
           {
@@ -80,6 +81,7 @@ function App() {
           },
         ]}
       />
+      <br />
       <Reviews
         reviews={[
           {
