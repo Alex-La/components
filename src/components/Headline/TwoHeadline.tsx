@@ -26,55 +26,42 @@ class TwoHeadline extends Component<Props, State> {
   render() {
     return (
       <Container fluid className="block-cont th-cont">
-        <Card>
-          <Card.Img
-            className="cd-img"
-            src={this.props.bgImage.data}
-            alt={this.props.bgImage.data}
-            width={this.props.bgImage.width}
-            height={this.props.bgImage.height}
-          />
-          <Card.ImgOverlay className="d-flex align-items-center">
-            <Container>
-              <Row>
-                <Col sm={4}>
-                  <Card className="text-center th-card">
-                    <Card.Text>{this.props.smallTitle}</Card.Text>
-                    <Card.Title>{this.props.title}</Card.Title>
-                    <Card.Text>{this.props.message}</Card.Text>
-                    <Card.Body>
-                      <Button
-                        className="sc-btn"
-                        href={this.props.firstButtonLink}
-                        variant="outline-dark"
-                      >
-                        {this.props.firstButtonText}
-                      </Button>
-                      {this.props.secondButtonText && (
-                        <Button
-                          className="sc-btn"
-                          href={this.props.secondButtonLink}
-                          variant="outline-dark"
-                        >
-                          {this.props.secondButtonText}
-                        </Button>
-                      )}
-                    </Card.Body>
-                  </Card>
-                </Col>
-                <Col sm={8}>
-                  <img
-                    className="float-right th-img"
-                    src={this.props.image?.data}
-                    alt={this.props.image?.data}
-                    width={this.props.image?.width}
-                    height={this.props.image?.height}
-                  />
-                </Col>
-              </Row>
-            </Container>
-          </Card.ImgOverlay>
-        </Card>
+        <div style={{ height: this.props.bgImage.height }}>
+          <Card className="th-card">
+            <Card.Img
+              className="th-img"
+              src={this.props.bgImage.data}
+              alt="Card image"
+              width={this.props.bgImage.width}
+              height={this.props.bgImage.height}
+            />
+            <Card.ImgOverlay className="d-flex align-items-center">
+              <Card className="th-text text-center">
+                <Card.Body>
+                  <Card.Text>{this.props.smallTitle}</Card.Text>
+                  <Card.Title>{this.props.title}</Card.Title>
+                  <Card.Text>{this.props.message}</Card.Text>
+                  <Card.Text>
+                    <Button
+                      variant="outline-dark"
+                      className="th-btn"
+                      href={this.props.firstButtonLink}
+                    >
+                      {this.props.firstButtonText}
+                    </Button>
+                    <Button
+                      variant="outline-dark"
+                      className="th-btn"
+                      href={this.props.secondButtonLink}
+                    >
+                      {this.props.secondButtonText}
+                    </Button>
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </Card.ImgOverlay>
+          </Card>
+        </div>
       </Container>
     );
   }

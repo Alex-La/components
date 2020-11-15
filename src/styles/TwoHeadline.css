@@ -3,21 +3,21 @@
 }
 
 .th-card {
-  padding: 10px;
+  position: fixed !important;
+  z-index: 0;
+  width: 100%;
+}
+
+.th-text {
+  width: 20rem;
   background-color: transparent !important;
-  border: none !important;
+  border: 0 !important;
 }
 
-.sc-btn {
-  margin: 5px;
+.th-btn {
+  margin: 2px;
 }
 
-.cd-img {
+.th-img {
   object-fit: cover;
-}
-
-@media (max-width: 426px) {
-  .th-img {
-    display: none;
-  }
 }
