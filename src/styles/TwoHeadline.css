@@ -1,23 +1,23 @@
 .th-cont {
-  padding: 0px !important;
+  padding: 0 !important;
 }
 
-.th-card {
-  position: fixed !important;
-  z-index: 0;
-  width: 100%;
+.th-img {
+  object-fit: cover;
+  z-index: -1 !important;
 }
 
-.th-text {
-  width: 20rem;
+.th-mess {
   background-color: transparent !important;
-  border: 0 !important;
+  border: none !important;
+  max-width: 20rem;
 }
 
 .th-btn {
   margin: 2px;
 }
 
-.th-img {
-  object-fit: cover;
+.th-card {
+  width: 100%;
+  position: relative;
 }

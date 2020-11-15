@@ -23,13 +23,6 @@ function App() {
           width: 1200,
           height: 400,
         }}
-        image={{
-          id: "2",
-          data:
-            "https://cdn.iconscout.com/icon/free/png-512/overwatch-2-569226.png",
-          width: 300,
-          height: 300,
-        }}
       />
       <br />
       <SliderNews

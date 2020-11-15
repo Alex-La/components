@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Container, Card, Button, Row, Col } from "react-bootstrap";
+import { Container, Card, Button } from "react-bootstrap";
 import ImageObject from "../../classes/ImageObject";
 import "../../styles/TwoHeadline.css";
 
@@ -12,31 +12,56 @@ interface Props {
   firstButtonLink: string;
   secondButtonLink?: string;
   bgImage: ImageObject;
-  image?: ImageObject;
 }
 
-interface State {}
+interface State {
+  offset: number;
+}
 
 class TwoHeadline extends Component<Props, State> {
   // eslint-disable-next-line @typescript-eslint/no-useless-constructor
   constructor(props: Props) {
     super(props);
+
+    this.state = {
+      offset: 0,
+    };
+
+    this.handleScroll = this.handleScroll.bind(this);
+  }
+
+  handleScroll() {
+    this.setState({
+      offset: window.pageYOffset,
+    });
+  }
+
+  componentDidMount() {
+    window.addEventListener("scroll", this.handleScroll);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.handleScroll);
   }
 
   render() {
     return (
-      <Container fluid className="block-cont th-cont">
-        <div style={{ height: this.props.bgImage.height }}>
-          <Card className="th-card">
-            <Card.Img
-              className="th-img"
-              src={this.props.bgImage.data}
-              alt="Card image"
-              width={this.props.bgImage.width}
-              height={this.props.bgImage.height}
-            />
-            <Card.ImgOverlay className="d-flex align-items-center">
-              <Card className="th-text text-center">
+      <Container fluid className="th-cont">
+        <Card
+          className="th-card"
+          style={{ transform: `translateY(${this.state.offset}px)` }}
+        >
+          <Card.Img
+            className="img-fluid th-img"
+            src={this.props.bgImage.data}
+            alt={this.props.bgImage.data}
+            style={{
+              minHeight: this.props.bgImage.height,
+            }}
+          />
+          <Card.ImgOverlay className="d-flex align-items-center">
+            <Container>
+              <Card className="th-mess text-center">
                 <Card.Body>
                   <Card.Text>{this.props.smallTitle}</Card.Text>
                   <Card.Title>{this.props.title}</Card.Title>
@@ -52,16 +77,16 @@ class TwoHeadline extends Component<Props, State> {
                     <Button
                       variant="outline-dark"
                       className="th-btn"
-                      href={this.props.secondButtonLink}
+                      href={this.props.firstButtonLink}
                     >
-                      {this.props.secondButtonText}
+                      {this.props.firstButtonText}
                     </Button>
                   </Card.Text>
                 </Card.Body>
               </Card>
-            </Card.ImgOverlay>
-          </Card>
-        </div>
+            </Container>
+          </Card.ImgOverlay>
+        </Card>
       </Container>
     );
   }
