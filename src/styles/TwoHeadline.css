@@ -4,7 +4,6 @@
 
 .th-img {
   object-fit: cover;
-  z-index: -1 !important;
 }
 
 .th-mess {
@@ -19,5 +18,4 @@
 
 .th-card {
   width: 100%;
-  position: relative;
 }

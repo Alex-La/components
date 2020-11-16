@@ -2,21 +2,11 @@ import React, { Component } from "react";
 import "../styles/FAQ.css";
 import QA from "../classes/QA";
 
-import { Container, Accordion, Card } from "react-bootstrap";
-import caretDown from "bootstrap-icons/icons/caret-down.svg";
-import caretUp from "bootstrap-icons/icons/caret-up.svg";
+import { Container, Accordion, Card, Row, Col } from "react-bootstrap";
+import caretDown from "bootstrap-icons/icons/plus.svg";
+import caretUp from "bootstrap-icons/icons/dash.svg";
 
 interface Props {
-  bg?:
-    | "primary"
-    | "secondary"
-    | "success"
-    | "danger"
-    | "warning"
-    | "info"
-    | "light"
-    | "dark";
-  text?: "white" | "dark";
   questions: QA[];
 }
 
@@ -45,32 +35,43 @@ class FAQ extends Component<Props, State> {
   }
 
   openHandler(index: number) {
-    const accardionState = [...this.state.accardionState];
-    accardionState[index] = !accardionState[index];
-    this.setState({ accardionState });
+    this.setState({
+      accardionState: this.state.accardionState.map((as, i) =>
+        i === index ? !as : false
+      ),
+    });
   }
 
-  // One question block
-  accordionItem(question: QA, index: number) {
+  questionCard(question: QA, index: number) {
     return (
-      <Card bg={this.props.bg} text={this.props.text} key={question.id}>
-        <Accordion.Toggle
-          className="faq-card"
-          as={Card.Header}
-          eventKey={question.id}
-          onClick={() => this.openHandler(index)}
-        >
-          {question.question}
-          <img
-            src={this.state.accardionState[index] ? caretUp : caretDown}
-            alt={this.state.accardionState[index] ? caretUp : caretDown}
-            title="Bootstrap"
-            className="float-right caret-icon"
-          ></img>
-        </Accordion.Toggle>
-
+      <Card key={question.id} className="faq-card">
+        <Card.Header className="faq-header">
+          <Accordion.Toggle
+            as="h4"
+            eventKey={question.id}
+            onClick={() => this.openHandler(index)}
+          >
+            <Row>
+              <Col xs={10}>{question.question}</Col>
+              <Col xs={2}>
+                <img
+                  src={this.state.accardionState[index] ? caretUp : caretDown}
+                  alt={this.state.accardionState[index] ? caretUp : caretDown}
+                  width={40}
+                  className="float-right"
+                />
+              </Col>
+            </Row>
+          </Accordion.Toggle>
+        </Card.Header>
         <Accordion.Collapse eventKey={question.id}>
-          <Card.Body>{question.answer}</Card.Body>
+          <Card.Body>
+            <Row>
+              <Col xs={{ span: 10, offset: 2 }} lg={{ span: 9, offset: 3 }}>
+                {question.answer}
+              </Col>
+            </Row>
+          </Card.Body>
         </Accordion.Collapse>
       </Card>
     );
@@ -78,12 +79,16 @@ class FAQ extends Component<Props, State> {
 
   render() {
     return (
-      <Container className="block-cont">
-        <Accordion>
-          {this.props.questions.map((question, index) =>
-            this.accordionItem(question, index)
-          )}
-        </Accordion>
+      <Container fluid className="block-cont">
+        <Row>
+          <Col xs={{ span: 12, offset: 0 }} xl={{ span: 9, offset: 3 }}>
+            <Accordion>
+              {this.props.questions.map((question, index) =>
+                this.questionCard(question, index)
+              )}
+            </Accordion>
+          </Col>
+        </Row>
       </Container>
     );
   }

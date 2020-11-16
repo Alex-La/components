@@ -14,43 +14,18 @@ interface Props {
   bgImage: ImageObject;
 }
 
-interface State {
-  offset: number;
-}
+interface State {}
 
 class TwoHeadline extends Component<Props, State> {
   // eslint-disable-next-line @typescript-eslint/no-useless-constructor
   constructor(props: Props) {
     super(props);
-
-    this.state = {
-      offset: 0,
-    };
-
-    this.handleScroll = this.handleScroll.bind(this);
-  }
-
-  handleScroll() {
-    this.setState({
-      offset: window.pageYOffset,
-    });
-  }
-
-  componentDidMount() {
-    window.addEventListener("scroll", this.handleScroll);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener("scroll", this.handleScroll);
   }
 
   render() {
     return (
       <Container fluid className="th-cont">
-        <Card
-          className="th-card"
-          style={{ transform: `translateY(${this.state.offset}px)` }}
-        >
+        <Card className="th-card">
           <Card.Img
             className="img-fluid th-img"
             src={this.props.bgImage.data}

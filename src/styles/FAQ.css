@@ -1,7 +1,11 @@
 .faq-card {
-  cursor: pointer;
+  background-color: transparent !important;
+  border: 0 !important;
+  border-top: 1px solid silver !important;
 }
 
-.caret-icon {
-  margin-top: 5px;
+.faq-header {
+  background-color: transparent !important;
+  border: 0 !important;
+  cursor: pointer;
 }
