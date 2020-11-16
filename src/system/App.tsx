@@ -5,6 +5,7 @@ import Reviews from "../components/Reviews/Reviews";
 import SliderNews from "../components/Carousel/SliderNews";
 import TwoHeadline from "../components/Headline/TwoHeadline";
 import FAQ from "../components/FAQ";
+import SelectelReviews from "../components/Reviews/SelectelReviews";
 
 function App() {
   return (
@@ -113,6 +114,35 @@ function App() {
             question: "Могу ли я изменить конфигурацию?",
             answer:
               "Серверы готовых конфигураций GL40 и GL80 не меняются, но вы можете собрать сервер с нужными характеристиками в конфигураторе.",
+          },
+        ]}
+      />
+      <br />
+      <SelectelReviews
+        reviews={[
+          {
+            id: "1",
+            rating: 1,
+            title: "Hello",
+            message:
+              "Серверы готовых конфигураций GL40 и GL80 не меняются, но вы можете собрать сервер с нужными характеристиками в конфигураторе.",
+            author: "Сергей Парамонов",
+            date: 3463523,
+            photo: {
+              id: "2",
+              data: "https://selectel.ru/wp-content/uploads/logo-tortuga.png",
+              width: 100,
+              height: 50,
+            },
+          },
+          {
+            id: "2",
+            rating: 1,
+            title: "Hello",
+            message:
+              "Серверы готовых конфигураций GL40 и GL80 не меняются, но вы можете собрать сервер с нужными характеристиками в конфигураторе.",
+            author: "Сергей Парамонов",
+            date: 3463523,
           },
         ]}
       />

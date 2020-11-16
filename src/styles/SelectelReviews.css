@@ -1,0 +1,21 @@
+.sr-cont {
+  padding: 0 !important;
+  border-top: 1px solid silver !important;
+  border-bottom: 1px solid silver !important;
+}
+
+.sr-row {
+  padding: 20px;
+}
+
+.sr-col {
+  font-size: 24px;
+}
+
+.sr-card {
+  border: 0 !important;
+}
+
+.sr-arrow {
+  cursor: pointer;
+}
