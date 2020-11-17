@@ -43,9 +43,10 @@ class TwoHeadline extends Component<Props, State> {
           <Card className="th-card">
             <Card.Img
               ref={this.onImgRefChange}
-              className="img-fluid th-img"
+              className="th-img"
               src={this.props.bgImage.data}
               alt={this.props.bgImage.data}
+              height={this.props.bgImage.height}
               style={{ minHeight: this.props.bgImage.height }}
             />
 
