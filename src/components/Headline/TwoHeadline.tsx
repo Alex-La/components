@@ -25,43 +25,33 @@ class TwoHeadline extends Component<Props, State> {
   render() {
     return (
       <Container fluid className="th-cont">
-        <Card className="th-card">
-          <Card.Img
-            className="img-fluid th-img"
-            src={this.props.bgImage.data}
-            alt={this.props.bgImage.data}
-            style={{
-              minHeight: this.props.bgImage.height,
-            }}
-          />
-          <Card.ImgOverlay className="d-flex align-items-center">
-            <Container>
-              <Card className="th-mess text-center">
-                <Card.Body>
-                  <Card.Text>{this.props.smallTitle}</Card.Text>
-                  <Card.Title>{this.props.title}</Card.Title>
-                  <Card.Text>{this.props.message}</Card.Text>
-                  <Card.Text>
-                    <Button
-                      variant="outline-dark"
-                      className="th-btn"
-                      href={this.props.firstButtonLink}
-                    >
-                      {this.props.firstButtonText}
-                    </Button>
-                    <Button
-                      variant="outline-dark"
-                      className="th-btn"
-                      href={this.props.firstButtonLink}
-                    >
-                      {this.props.firstButtonText}
-                    </Button>
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </Container>
-          </Card.ImgOverlay>
-        </Card>
+        <div className="parallax d-flex align-items-center">
+          <Container className="d-flex align-items-center">
+            <Card className="th-mess text-center">
+              <Card.Body>
+                <Card.Text>{this.props.smallTitle}</Card.Text>
+                <Card.Title>{this.props.title}</Card.Title>
+                <Card.Text>{this.props.message}</Card.Text>
+                <Card.Text>
+                  <Button
+                    variant="outline-dark"
+                    className="th-btn"
+                    href={this.props.firstButtonLink}
+                  >
+                    {this.props.firstButtonText}
+                  </Button>
+                  <Button
+                    variant="outline-dark"
+                    className="th-btn"
+                    href={this.props.firstButtonLink}
+                  >
+                    {this.props.firstButtonText}
+                  </Button>
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </Container>
+        </div>
       </Container>
     );
   }

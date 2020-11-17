@@ -1,9 +1,15 @@
-.th-cont {
-  padding: 0 !important;
+.parallax {
+  background-image: url(https://i.picsum.photos/id/882/1200/400.jpg?hmac=o2MuWdU6efrRqxc_0PRK9JuzBRAfxHAN0RW85FVCMrU);
+  object-fit: cover;
+  height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.th-img {
-  object-fit: cover;
+.th-cont {
+  padding: 0 !important;
 }
 
 .th-mess {

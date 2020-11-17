@@ -10,7 +10,7 @@ import SelectelReviews from "../components/Reviews/SelectelReviews";
 function App() {
   return (
     <div className="App">
-      {/* <TwoHeadline
+      <TwoHeadline
         smallTitle="BLACK FRIDAY"
         title="SAVE ON TECH FOR ALL YOU DO"
         message="The latest models at sutting price, just for tou."
@@ -99,7 +99,7 @@ function App() {
           },
         ]}
       />
-      */}
+
       <br />
       <FAQ
         questions={[
