@@ -4,6 +4,8 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  display: inline-block;
+  position: relative;
 }
 
 .th-cont {
@@ -14,6 +16,10 @@
   background-color: transparent !important;
   border: none !important;
   max-width: 20rem;
+  position: absolute !important;
+  top: 20%;
+  overflow: hidden !important;
+  background-size: cover !important;
 }
 
 .th-btn {
