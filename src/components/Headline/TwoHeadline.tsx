@@ -25,8 +25,14 @@ class TwoHeadline extends Component<Props, State> {
   render() {
     return (
       <Container fluid className="th-cont">
-        <div className="parallax d-flex align-items-center">
-          <Container className="d-flex align-items-center">
+        <div
+          className="parallax d-flex align-items-center"
+          style={{
+            backgroundImage: `url(${this.props.bgImage.data})`,
+            height: this.props.bgImage.height,
+          }}
+        >
+          <Container>
             <Card className="th-mess text-center">
               <Card.Body>
                 <Card.Text>{this.props.smallTitle}</Card.Text>
