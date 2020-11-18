@@ -1,0 +1,70 @@
+.gm-card {
+  background-color: transparent !important;
+  border: 0 !important;
+  max-width: 25rem;
+}
+
+.crd {
+  color: black;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.crd:hover {
+  color: black;
+  text-decoration: none;
+  transform: scale(1.03);
+}
+
+.c2-link {
+  color: white;
+}
+.c2-link:hover {
+  color: white;
+}
+
+.img-1 {
+  object-fit: cover;
+}
+
+.gm-card-wrap {
+  box-shadow: 30px 30px 20px rgba(0, 0, 0, 0.1);
+  border: 0 !important;
+}
+
+.card-4 {
+  bottom: 190px;
+  right: 30px;
+}
+
+.gm-col {
+  padding: 0 !important;
+}
+
+.card-3 {
+  bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  .card-2 {
+    top: 30px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .card-4 {
+    bottom: 50px;
+    right: 30px;
+  }
+  .card-2 {
+    right: 40px;
+    top: 100px;
+  }
+}
+
+@media (max-width: 767px) {
+  .col-3 {
+    padding-right: 30px !important;
+    padding-left: 30px !important;
+  }
+}

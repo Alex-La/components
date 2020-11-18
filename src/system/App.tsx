@@ -3,10 +3,16 @@ import "../styles/App.css";
 
 import CitroenMenu from "../components/Menu/CitroenMenu";
 import YandexFAQ from "../components/FAQ/YandexFAQ";
+import GmMenu from "../components/Menu/GmMenu";
 
 function App() {
   return (
     <div className="App">
+      <br />
+      <GmMenu
+        messages={[{ id: "1", message: "Hello", title: "world", date: 1020 }]}
+      />
+      <br />
       <CitroenMenu
         messages={[
           {
