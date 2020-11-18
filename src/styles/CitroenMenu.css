@@ -1,0 +1,30 @@
+.cm-col {
+  padding: 0 !important;
+}
+
+.cm-card {
+  border: 0 !important;
+  background-color: black !important;
+  cursor: pointer;
+}
+
+.cm-col:hover .cm-img {
+  opacity: 0.1;
+}
+
+.cm-col:hover .cm-over {
+  color: #b48f6d;
+}
+
+.cm-btn {
+  visibility: hidden;
+  background-color: #b48f6d !important;
+  border: 0 !important;
+  position: absolute;
+  bottom: 7%;
+  left: 5%;
+}
+
+.cm-col:hover .cm-btn {
+  visibility: visible;
+}
