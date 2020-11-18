@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import "../styles/FAQ.css";
-import QA from "../classes/QA";
-
-import { Container, Accordion, Card, Row, Col } from "react-bootstrap";
-import caretDown from "bootstrap-icons/icons/plus.svg";
-import caretUp from "bootstrap-icons/icons/dash.svg";
+import QA from "../../classes/QA";
+import { Container, Accordion, Card, Col, Row } from "react-bootstrap";
+import chevronUp from "bootstrap-icons/icons/chevron-up.svg";
+import chevronDown from "bootstrap-icons/icons/chevron-down.svg";
+import chevronRight from "bootstrap-icons/icons/chevron-right.svg";
+import "../../styles/YandexFAQ.css";
 
 interface Props {
   questions: QA[];
@@ -14,7 +14,7 @@ interface State {
   accardionState: boolean[];
 }
 
-class FAQ extends Component<Props, State> {
+class YandexFAQ extends Component<Props, State> {
   // eslint-disable-next-line @typescript-eslint/no-useless-constructor
   constructor(props: Props) {
     super(props);
@@ -42,12 +42,12 @@ class FAQ extends Component<Props, State> {
     });
   }
 
-  questionCard(question: QA, index: number) {
+  faqCard(question: QA, index: number) {
     return (
-      <Card key={question.id} className="faq-card">
-        <Card.Header className="faq-header">
+      <Card key={question.id} className="yfq-card">
+        <Card.Header className="yfq-card-h">
           <Accordion.Toggle
-            as="h4"
+            as="h5"
             eventKey={question.id}
             onClick={() => this.openHandler(index)}
           >
@@ -55,9 +55,13 @@ class FAQ extends Component<Props, State> {
               <Col xs={10}>{question.question}</Col>
               <Col xs={2}>
                 <img
-                  src={this.state.accardionState[index] ? caretUp : caretDown}
-                  alt={this.state.accardionState[index] ? caretUp : caretDown}
-                  width={40}
+                  src={
+                    this.state.accardionState[index] ? chevronUp : chevronDown
+                  }
+                  alt={
+                    this.state.accardionState[index] ? chevronUp : chevronDown
+                  }
+                  width={20}
                   className="float-right"
                 />
               </Col>
@@ -65,13 +69,7 @@ class FAQ extends Component<Props, State> {
           </Accordion.Toggle>
         </Card.Header>
         <Accordion.Collapse eventKey={question.id}>
-          <Card.Body>
-            <Row>
-              <Col xs={{ span: 10, offset: 2 }} lg={{ span: 9, offset: 3 }}>
-                {question.answer}
-              </Col>
-            </Row>
-          </Card.Body>
+          <Card.Body>{question.answer}</Card.Body>
         </Accordion.Collapse>
       </Card>
     );
@@ -79,12 +77,15 @@ class FAQ extends Component<Props, State> {
 
   render() {
     return (
-      <Container fluid className="block-cont">
+      <Container>
         <Row>
-          <Col xs={{ span: 12, offset: 0 }} xl={{ span: 9, offset: 3 }}>
+          <Col xs={12} lg={4}>
+            <h3>Вопросы и ответы</h3>
+          </Col>
+          <Col xs={12} lg={8}>
             <Accordion>
               {this.props.questions.map((question, index) =>
-                this.questionCard(question, index)
+                this.faqCard(question, index)
               )}
             </Accordion>
           </Col>
@@ -94,4 +95,4 @@ class FAQ extends Component<Props, State> {
   }
 }
 
-export default FAQ;
+export default YandexFAQ;

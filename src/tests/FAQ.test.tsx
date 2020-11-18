@@ -1,7 +1,7 @@
 import React from "react";
 
 import { render, screen } from "@testing-library/react";
-import FAQ from "../components/FAQ";
+import FAQ from "../components/FAQ/FAQ";
 import QA from "../classes/QA";
 
 test("News.Test_properties_1", () => {
