@@ -8,3 +8,8 @@
   background-color: transparent !important;
   cursor: pointer;
 }
+
+.yfq-sticky {
+  position: sticky !important;
+  top: 0 !important;
+}

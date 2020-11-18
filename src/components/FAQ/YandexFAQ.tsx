@@ -80,7 +80,7 @@ class YandexFAQ extends Component<Props, State> {
       <Container>
         <Row>
           <Col xs={12} lg={4}>
-            <h3>Вопросы и ответы</h3>
+            <h3 className="yfq-sticky">Вопросы и ответы</h3>
           </Col>
           <Col xs={12} lg={8}>
             <Accordion>
