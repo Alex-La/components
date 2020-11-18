@@ -43,6 +43,7 @@
 
 .card-3 {
   bottom: 20px;
+  background-color: #f1f1f1 !important;
 }
 
 @media (min-width: 768px) {

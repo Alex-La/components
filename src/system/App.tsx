@@ -10,7 +10,57 @@ function App() {
     <div className="App">
       <br />
       <GmMenu
-        messages={[{ id: "1", message: "Hello", title: "world", date: 1020 }]}
+        messages={[
+          {
+            id: "1",
+            message:
+              "GMC HUMMER EV lays foundation for GM's all-electric future",
+            title: "COMMITET",
+            date: 1020,
+            linkHref: "/",
+            image: {
+              id: "1",
+              data: "https://picsum.photos/1200/600",
+              width: 1200,
+              height: 400,
+            },
+          },
+          {
+            id: "2",
+            message:
+              "Learn more about our vision of zero crashes, zero emissions, and zero congerstion.",
+            title: "OUR VISION",
+            date: 1020,
+            linkHref: "/",
+          },
+          {
+            id: "3",
+            message: "Flat, Stackable EV Batteries are the Winning Formula",
+            title: "TECHNOLOGY",
+            date: 1020,
+            linkHref: "/",
+            image: {
+              id: "1",
+              data: "https://picsum.photos/700/400",
+              width: 700,
+              height: 400,
+            },
+          },
+          {
+            id: "4",
+            message:
+              "No Slowing Down, No Compromises on the Road to Zero Emissions",
+            title: "COMMITMENT",
+            date: 1020,
+            linkHref: "/",
+            image: {
+              id: "1",
+              data: "https://picsum.photos/800/400",
+              width: 800,
+              height: 400,
+            },
+          },
+        ]}
       />
       <br />
       <CitroenMenu
