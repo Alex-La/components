@@ -64,40 +64,44 @@ class GmMenu extends Component<Props, State> {
             </Card>
           </Col>
 
-          <Col xs={12} md={5} lg={3} className="gm-col">
-            <Card bg="primary" text="white" className="card-2">
-              <Card.Body>
-                <Card.Title>{messages[1].title}</Card.Title>
-                <Card.Text>
-                  <a href={messages[1].linkHref} className="c2-link">
-                    {messages[1].message}
-                  </a>
-                </Card.Text>
-                <br />
-              </Card.Body>
-            </Card>
-          </Col>
+          {messages[1] && (
+            <Col xs={12} md={5} lg={3} className="gm-col">
+              <Card bg="primary" text="white" className="card-2">
+                <Card.Body>
+                  <Card.Title>{messages[1].title}</Card.Title>
+                  <Card.Text>
+                    <a href={messages[1].linkHref} className="c2-link">
+                      {messages[1].message}
+                    </a>
+                  </Card.Text>
+                  <br />
+                </Card.Body>
+              </Card>
+            </Col>
+          )}
 
-          <Col
-            xs={12}
-            md={{ offset: 1, span: 5 }}
-            lg={{ offset: 1, span: 4 }}
-            className="gm-col col-3"
-          >
-            <Card
-              as="a"
-              href={messages[2].linkHref}
-              className="card-3 gm-card-wrap crd"
+          {messages[2] && (
+            <Col
+              xs={12}
+              md={{ offset: 1, span: 5 }}
+              lg={{ offset: 1, span: 4 }}
+              className="gm-col col-3"
             >
-              <Card.Img variant="top" src={messages[2].image?.data} />
-              <Card.Body>
-                <Card.Text>{messages[2].title}</Card.Text>
-                <Card.Title>{messages[2].message}</Card.Title>
-              </Card.Body>
-            </Card>
-          </Col>
+              <Card
+                as="a"
+                href={messages[2].linkHref}
+                className="card-3 gm-card-wrap crd"
+              >
+                <Card.Img variant="top" src={messages[2].image?.data} />
+                <Card.Body>
+                  <Card.Text>{messages[2].title}</Card.Text>
+                  <Card.Title>{messages[2].message}</Card.Title>
+                </Card.Body>
+              </Card>
+            </Col>
+          )}
 
-          {this.state.width >= 768 && (
+          {this.state.width >= 768 && messages[3] && (
             <Col xs={12} md={6} lg={7} className="gm-col">
               <Card
                 as="a"

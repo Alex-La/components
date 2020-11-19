@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Container, Card, Button, CardImg } from "react-bootstrap";
+import { Container, Card, Button } from "react-bootstrap";
 import ImageObject from "../../classes/ImageObject";
 import "../../styles/TwoHeadline.css";
 

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "../styles/FAQ.css";
+import "../../styles/FAQ.css";
 import QA from "../../classes/QA";
 
 import { Container, Accordion, Card, Row, Col } from "react-bootstrap";
