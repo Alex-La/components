@@ -1,0 +1,47 @@
+.hl-cont {
+  padding: 0 !important;
+}
+
+.hl-card {
+  background-color: transparent !important;
+  border: 0 !important;
+}
+
+.hl-bg {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hl-row {
+  margin: 0 !important;
+}
+
+.hl-col {
+  padding: 0 !important;
+  background-color: transparent !important;
+}
+
+.hl-btn {
+  margin: 10px;
+}
+
+.hl-item .hl-card-img {
+  opacity: 0;
+}
+
+.hl-item:hover .hl-card-img {
+  opacity: 1;
+}
+
+.hl-item {
+  cursor: pointer;
+  border-left: 1px solid silver !important;
+  border-bottom: 1px solid silver !important;
+}
+
+@media (max-width: 1023px) {
+  .hl-item .hl-card-img {
+    opacity: 1;
+  }
+}
